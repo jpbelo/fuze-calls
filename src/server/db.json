@@ -1,0 +1,14 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "contact": "919191919"
+    },
+    {
+      "id": 2,
+      "contact": "João Belo"
+    }
+  ],
+  "history": [],
+  "calls": []
+}
