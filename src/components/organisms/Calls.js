@@ -1,34 +1,28 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 
-import { H2 } from '../atoms/Headings'
-import CallCard from '../molecules/CallCard'
+import { H2 } from '../atoms'
+import { CallCard } from '../molecules'
+import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
   background-color: rgba(255, 0, 0, 0.05);
   ${space};
 `
 
-const Calls = ({ calls }) => {
+const Calls = () => {
+  const { calls } = useCallsContext()
   return (
     <Wrapper>
       <H2>Calls</H2>
       <div>
         {calls.map(call => (
-          <CallCard {...call} />
+          <CallCard key={call.id} {...call} />
         ))}
       </div>
     </Wrapper>
   )
-}
-
-Calls.propTypes = {
-  calls: PropTypes.array,
-}
-Calls.defaultProps = {
-  calls: [],
 }
 
 export default Calls

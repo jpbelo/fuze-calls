@@ -10,6 +10,7 @@ const CallCard = props => {
   return (
     <Wrapper>
       <H3>{props.id}</H3>
+      <p>{props.contact}</p>
     </Wrapper>
   )
 }

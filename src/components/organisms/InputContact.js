@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { space } from 'styled-system'
 
 const Wrapper = styled.div`
-  background-color: rgba(255, 0, 255, 0.05);
+  background-color: rgba(0, 255, 255, 0.1);
   ${space};
 `
 

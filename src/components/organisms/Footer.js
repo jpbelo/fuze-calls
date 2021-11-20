@@ -1,12 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.footer``
+const Wrapper = styled.footer`
+  padding: 12px 16px;
+  background-color: #f8f8f8;
+`
 
 const Footer = () => {
   return (
     <Wrapper>
-      <p>component Footer</p>
+      <a
+        href="https://github.com/jpbelo/fuze-calls"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github
+      </a>
     </Wrapper>
   )
 }

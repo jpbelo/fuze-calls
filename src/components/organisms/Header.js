@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { H1 } from '../atoms/Headings'
 
 const Wrapper = styled.header`
-  padding: 8px 16px;
+  padding: 20px 16px;
   background-color: #f8f8f8;
 `
 

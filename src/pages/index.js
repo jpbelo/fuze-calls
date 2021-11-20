@@ -12,9 +12,18 @@ import {
 
 const Main = styled.main`
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 100px);
   display: flex;
-  border: 1px solid red;
+  & > div {
+    flex: 1;
+  }
+`
+const MidSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  & > div {
+    flex: 1;
+  }
 `
 
 export default function Home() {
@@ -26,10 +35,10 @@ export default function Home() {
       <Header />
       <Main>
         <Contacts />
-        <div>
+        <MidSection>
           <InputContact />
           <Calls />
-        </div>
+        </MidSection>
         <History />
       </Main>
       <Footer />
