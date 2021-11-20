@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   border: 1px solid black;
 `
 
-const CallCard = props => {
+const ContactCard = props => {
   return (
     <Wrapper>
       <H3>{props.id}</H3>
@@ -17,9 +17,9 @@ const CallCard = props => {
   )
 }
 
-CallCard.propTypes = {
+ContactCard.propTypes = {
   id: PropTypes.number.isRequired,
   contact: PropTypes.string.isRequired,
 }
 
-export default CallCard
+export default ContactCard

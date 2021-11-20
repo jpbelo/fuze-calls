@@ -8,6 +8,7 @@ import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
   background-color: rgba(255, 0, 0, 0.05);
+  padding: 16px;
   ${space};
 `
 

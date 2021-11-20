@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { H1 } from '../atoms/Headings'
+import { H1 } from '../atoms'
 
 const Wrapper = styled.header`
   padding: 20px 16px;

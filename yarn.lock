@@ -1909,6 +1909,11 @@ follow-redirects@^1.14.4:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
   integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
 
+fontsource-open-sans@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fontsource-open-sans/-/fontsource-open-sans-4.0.0.tgz#f5884fe491b86e522e6ce10dbddaebd5d152fa95"
+  integrity sha512-WWiMhDr/rgDPnw1tKjcqPpjRDJDrDnNVLpfscr7wwbpK33q3zcVnkhBOUcaZZlw3y1iRc+pj/ciPzLWExKT3zw==
+
 foreach@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"

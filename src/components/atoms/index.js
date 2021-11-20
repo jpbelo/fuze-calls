@@ -1,1 +1,1 @@
-export { H1, H2, H3 } from './Headings'
+export { H1, H2, H3, P } from './Text'
