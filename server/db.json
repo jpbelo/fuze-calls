@@ -1,0 +1,25 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "contact": "919191919"
+    },
+    {
+      "id": 2,
+      "contact": "João Belo"
+    }
+  ],
+  "history": [],
+  "calls": [
+    {
+      "id": 1,
+      "state": "RING",
+      "contact": "919191919"
+    },
+    {
+      "id": 2,
+      "state": "ACTIVE",
+      "contact": "919191919"
+    }
+  ]
+}
