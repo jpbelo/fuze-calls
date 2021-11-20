@@ -37,3 +37,11 @@ export const P = styled.p`
   line-height: 1.3;
   ${space};
 `
+
+export const Small = styled.small`
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  ${space};
+`

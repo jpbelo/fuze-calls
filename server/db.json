@@ -5,21 +5,27 @@
       "contact": "919191919"
     },
     {
-      "id": 2,
-      "contact": "João Belo"
+      "contact": "João",
+      "id": 2
     }
   ],
-  "history": [],
+  "history": [
+    {
+      "contact": "12322",
+      "state": "TERMINATED",
+      "initiatedAt": "2021-11-20T20:55:59.786Z",
+      "answeredAt": "2021-11-20T20:56:02.368Z",
+      "terminatedAt": "2021-11-20T20:56:08.536Z",
+      "id": 1
+    }
+  ],
   "calls": [
     {
-      "id": 1,
-      "state": "RING",
-      "contact": "919191919"
-    },
-    {
-      "id": 2,
+      "contact": "123",
       "state": "ACTIVE",
-      "contact": "919191919"
+      "initiatedAt": "2021-11-20T20:55:53.486Z",
+      "answeredAt": "2021-11-20T20:56:00.170Z",
+      "id": 1
     }
   ]
 }

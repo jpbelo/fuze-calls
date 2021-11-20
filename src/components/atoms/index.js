@@ -1,1 +1,2 @@
-export { H1, H2, H3, P } from './Text'
+export { H1, H2, H3, P, Small } from './Text'
+export { default as ButtonIconText } from './ButtonIconText'

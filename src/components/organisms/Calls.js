@@ -17,6 +17,7 @@ const Calls = () => {
   return (
     <Wrapper>
       <H2>Calls</H2>
+      <p>{calls.length}</p>
       <div>
         {calls.map(call => (
           <CallCard key={call.id} {...call} />
