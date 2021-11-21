@@ -31,3 +31,5 @@ History: [http://localhost:3001/history](http://localhost:3001/history)
 - add unit tests to the functions 
 - input validation
 - better error handling (show feedback on actions like failed to initiate a call)
+- cancel the patch request when a call is terminated before it is answered
+

@@ -136,6 +136,12 @@ function useProvideCallsContext() {
     })
 
   const terminateCall = id => {
+    setCalls(calls =>
+      calls.map(call => {
+        if (call.id === id) return { ...call, state: 'TERMINATING' }
+        return call
+      })
+    )
     const currentCall = { ...find(calls, { id }) }
     delete currentCall.id
     return new Promise((resolve, reject) => {

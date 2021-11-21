@@ -3,14 +3,33 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { RiPhoneFill } from 'react-icons/ri'
 
-import { H3, P, ButtonIconText } from '../atoms'
+import { H3, P, Small, ButtonIconText } from '../atoms'
 import msToTime from '../../utils/msToTime'
 import { useCallsContext } from '../../utils/context'
 
+const stateColor = {
+  RING: '#00f8',
+  ACTIVE: '#0f08',
+  TERMINATING: '#f008',
+}
+
 const Wrapper = styled.div`
-  border: 1px solid black;
+  width: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 3px 3px 12px -2px #e5e5e5;
   transition: opacity 0.2s ease-in-out;
   opacity: ${props => (props.isTerminating ? 0.4 : 1)};
+  text-align: center;
+`
+
+const CallState = styled.div`
+  background-color: ${props => stateColor[props.state]};
+  padding: 2px 8px;
+`
+
+const InnerCard = styled.div`
+  padding: 12px 8px;
 `
 
 const CallCard = props => {
@@ -41,14 +60,17 @@ const CallCard = props => {
   }
 
   return (
-    <Wrapper isTerminating={isTerminating}>
-      <P>{state}</P>
-      <H3>{id}</H3>
-      <P>{contact}</P>
-      <P>{state === 'RING' ? 'ringing...' : timer}</P>
-      <ButtonIconText onClick={() => handleTerminateCall(id)} label="end call">
-        <RiPhoneFill />
-      </ButtonIconText>
+    <Wrapper isTerminating={isTerminating} {...props}>
+      <CallState state={state}>
+        <Small>{state}</Small>
+      </CallState>
+      <InnerCard>
+        <H3 mb={'6px'}>{contact}</H3>
+        <P mb={'12px'}>{state === 'RING' ? 'ringing...' : timer}</P>
+        <ButtonIconText onClick={() => handleTerminateCall(id)}>
+          <RiPhoneFill style={{ transform: 'rotate(135deg)' }} />
+        </ButtonIconText>
+      </InnerCard>
     </Wrapper>
   )
 }
@@ -56,7 +78,7 @@ const CallCard = props => {
 CallCard.propTypes = {
   id: PropTypes.number.isRequired,
   contact: PropTypes.string.isRequired,
-  state: PropTypes.oneOf(['RING', 'ACTIVE']).isRequired,
+  state: PropTypes.oneOf(['RING', 'ACTIVE', 'TERMINATING']).isRequired,
   initiatedAt: PropTypes.string,
   answeredAt: PropTypes.string,
 }

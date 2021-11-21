@@ -7,22 +7,26 @@ import { CallCard } from '../molecules'
 import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
-  background-color: rgba(255, 0, 0, 0.05);
   padding: 16px;
+  overflow: scroll;
   ${space};
+`
+const ListWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 `
 
 const Calls = () => {
   const { calls } = useCallsContext()
   return (
     <Wrapper>
-      <H2>Calls</H2>
-      <p>{calls.length}</p>
-      <div>
+      <H2 mb={24}>Calls ({calls.length})</H2>
+      <ListWrapper>
         {calls.map(call => (
-          <CallCard key={call.id} {...call} />
+          <CallCard {...call} key={call.id} mb={16} />
         ))}
-      </div>
+      </ListWrapper>
     </Wrapper>
   )
 }
