@@ -7,13 +7,14 @@ import { HistoryCard } from '../molecules'
 import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
-  background-color: rgba(0, 0, 255, 0.05);
+  background-color: rgba(252, 226, 67, 0.1);
   padding: 16px;
   overflow: hidden;
   ${space};
 `
 const ListWrapper = styled.div`
-  height: calc(100% - 50px);
+  height: 100%;
+  padding-bottom: 60px;
   overflow: scroll;
 `
 

@@ -14,7 +14,8 @@ const stateColor = {
 }
 
 const Wrapper = styled.div`
-  width: 140px;
+  min-width: 140px;
+  max-width: 200px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 3px 3px 12px -2px #e5e5e5;

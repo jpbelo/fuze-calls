@@ -8,7 +8,7 @@ import { ButtonIconText, H2 } from '../atoms'
 import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
-  background-color: rgba(0, 255, 255, 0.1);
+  background-color: rgba(240, 64, 104, 0.1);
   padding: 16px;
   position: relative;
   ${space};
@@ -43,7 +43,7 @@ const InputContact = () => {
         <Formik
           initialValues={{ contact: '' }}
           onSubmit={(values, actions) => {
-            addContact(values.contact)
+            addContact(values.contact).then(() => actions.resetForm())
           }}
         >
           {props => (
@@ -56,13 +56,19 @@ const InputContact = () => {
                 name="contact"
               />
               <ButtonsWrapper>
-                <ButtonIconText type="submit" label="Add contact" mr="8px">
+                <ButtonIconText
+                  type="submit"
+                  label="Add contact"
+                  mr="8px"
+                  disabled={!props.dirty}
+                >
                   <RiAddCircleFill />
                 </ButtonIconText>
                 <ButtonIconText
                   type="button"
                   label="Call"
                   onClick={e => handleClickCall(e, props.values.contact)}
+                  disabled={!props.dirty}
                 >
                   <RiPhoneFill />
                 </ButtonIconText>

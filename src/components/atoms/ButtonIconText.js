@@ -13,13 +13,13 @@ const Wrapper = styled.button`
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  color: #666;
+  color: ${props => (props.disabled ? '#aaa' : '#666')};
   & > small {
     display: block;
   }
   &:hover {
-    color: #000;
-    background-color: #fff;
+    color: ${props => (props.disabled ? '#aaa' : '#000')};
+    background-color: ${props => (props.disabled ? 'transparent' : '#fff')};
   }
   ${space};
 `

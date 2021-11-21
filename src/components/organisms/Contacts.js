@@ -7,13 +7,14 @@ import { H2 } from '../atoms'
 import { ContactCard } from '../molecules'
 
 const Wrapper = styled.div`
-  background-color: rgba(0, 255, 0, 0.05);
+  background-color: rgba(51, 191, 196, 0.1);
   padding: 16px;
   overflow: hidden;
   ${space};
 `
 const ListWrapper = styled.div`
-  height: calc(100% - 50px);
+  height: 100%;
+  padding-bottom: 60px;
   overflow: scroll;
 `
 

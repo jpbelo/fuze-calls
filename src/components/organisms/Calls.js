@@ -12,12 +12,16 @@ const Wrapper = styled.div`
   ${space};
 `
 const ListWrapper = styled.div`
-  height: calc(100% - 50px);
+  height: 100%;
+  padding-bottom: 60px;
   overflow: scroll;
   & > div {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    & > div {
+      flex: 1;
+    }
   }
 `
 
