@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   ${space};
 `
 const ListWrapper = styled.div`
-  height: 100%;
+  height: calc(100% - 50px);
   overflow: scroll;
   & > div {
     display: flex;

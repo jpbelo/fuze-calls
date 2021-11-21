@@ -41,6 +41,7 @@ const ContactCard = props => {
           type="button"
           onClick={() => handleDeleteClick(id)}
           title="delete contact"
+          mr="8px"
         >
           <RiDeleteBin5Fill />
         </ButtonIconText>

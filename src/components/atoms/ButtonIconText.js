@@ -8,15 +8,18 @@ import { Small } from '.'
 const Wrapper = styled.button`
   background: none;
   border: none;
-  width: 50px;
+  width: 60px;
+  padding: 4px;
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  color: #666;
   & > small {
     display: block;
   }
   &:hover {
-    color: #999;
+    color: #000;
+    background-color: #fff;
   }
   ${space};
 `

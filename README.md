@@ -28,8 +28,8 @@ History: [http://localhost:3001/history](http://localhost:3001/history)
 
 - use typescript
 - more mobile friendly UI
-- add unit tests to the functions 
+- add unit tests to the functions
 - input validation
 - better error handling (show feedback on actions like failed to initiate a call)
 - cancel the patch request when a call is terminated before it is answered
-
+- functionality separated and more informative commit messages

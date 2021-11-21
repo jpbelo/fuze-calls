@@ -67,8 +67,11 @@ const CallCard = props => {
       <InnerCard>
         <H3 mb={'6px'}>{contact}</H3>
         <P mb={'12px'}>{state === 'RING' ? 'ringing...' : timer}</P>
-        <ButtonIconText onClick={() => handleTerminateCall(id)}>
-          <RiPhoneFill style={{ transform: 'rotate(135deg)' }} />
+        <ButtonIconText
+          onClick={() => handleTerminateCall(id)}
+          title="terminate call"
+        >
+          <RiPhoneFill style={{ transform: 'rotate(135deg)' }} color="red" />
         </ButtonIconText>
       </InnerCard>
     </Wrapper>
