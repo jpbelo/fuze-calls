@@ -123,7 +123,7 @@ function useProvideCallsContext() {
         .then(res => {
           setCalls(prev => [res.data, ...prev])
           const ringTime = Math.floor(Math.random() * (10000 - 999) + 1000)
-          setTimeout(function () {
+          setTimeout(() => {
             answerCall(res.data.id).catch(() => {
               setCalls(calls => calls.filter(call => call.id !== res.data.id))
             })

@@ -9,23 +9,6 @@
       "id": 2
     }
   ],
-  "history": [
-    {
-      "contact": "12322",
-      "state": "TERMINATED",
-      "initiatedAt": "2021-11-20T20:55:59.786Z",
-      "answeredAt": "2021-11-20T20:56:02.368Z",
-      "terminatedAt": "2021-11-20T20:56:08.536Z",
-      "id": 1
-    }
-  ],
-  "calls": [
-    {
-      "contact": "123",
-      "state": "ACTIVE",
-      "initiatedAt": "2021-11-20T20:55:53.486Z",
-      "answeredAt": "2021-11-20T20:56:00.170Z",
-      "id": 1
-    }
-  ]
+  "history": [],
+  "calls": []
 }

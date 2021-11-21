@@ -6,7 +6,7 @@ export const H1 = styled.h1`
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
   ${space};
 `

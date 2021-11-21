@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import { Hidden, Visible } from 'react-awesome-styled-grid'
 
 import {
   Header,
@@ -9,10 +10,11 @@ import {
   Calls,
   History,
 } from '../components/organisms'
+import { useState } from 'react'
 
 const Main = styled.main`
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   display: flex;
   & > div {
     flex: 1;
@@ -25,22 +27,56 @@ const MidSection = styled.div`
     flex: 1;
   }
 `
+const MobileOverlay = styled.div`
+  position: fixed;
+  top: 80px;
+  left: 10%;
+  height: calc(80vh - 120px);
+  min-height: 250px;
+  width: 80%;
+  background-color: red;
+`
 
 export default function Home() {
+  const [showContacts, setShowContacts] = useState(false)
+  const [showHistory, setShowHistory] = useState(false)
+
+  const handleContactsButtonClick = () => setShowContacts(prev => !prev)
+  const handleHistoryButtonClick = () => setShowHistory(prev => !prev)
+
   return (
     <div>
       <Head>
         <title>Fuze Calls Challenge</title>
       </Head>
-      <Header />
+      <Header
+        contactsButton={handleContactsButtonClick}
+        historyButton={handleHistoryButtonClick}
+      />
       <Main>
-        <Contacts />
+        <Hidden xs>
+          <Contacts />
+        </Hidden>
         <MidSection>
           <InputContact />
           <Calls />
         </MidSection>
-        <History />
+        <Hidden xs>
+          <History />
+        </Hidden>
       </Main>
+      <Visible xs>
+        {showContacts && (
+          <MobileOverlay>
+            <Contacts />
+          </MobileOverlay>
+        )}
+        {showHistory && (
+          <MobileOverlay>
+            <History />
+          </MobileOverlay>
+        )}
+      </Visible>
       <Footer />
     </div>
   )

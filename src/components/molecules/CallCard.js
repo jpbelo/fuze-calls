@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { RiPhoneFill } from 'react-icons/ri'
@@ -20,14 +20,20 @@ const CallCard = props => {
   const [timer, setTimer] = useState('...')
   const [isTerminating, setIsTerminating] = useState(false)
 
-  if (state === 'ACTIVE') {
-    setTimeout(function () {
-      const timer = answeredAt
-        ? new Date() - new Date(answeredAt)
-        : new Date() - new Date(initiatedAt)
-      setTimer(msToTime(timer))
-    }, 1000)
-  }
+  useEffect(() => {
+    let timeout
+    if (state === 'ACTIVE') {
+      timeout = setTimeout(() => {
+        const delta = answeredAt
+          ? new Date() - new Date(answeredAt)
+          : new Date() - new Date(initiatedAt)
+        setTimer(msToTime(delta))
+      }, 1000)
+    }
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [timer, state])
 
   const handleTerminateCall = id => {
     setIsTerminating(true)
