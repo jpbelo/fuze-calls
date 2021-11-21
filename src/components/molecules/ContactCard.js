@@ -8,9 +8,14 @@ import { ButtonIconText } from '../atoms'
 import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
-  border: 1px solid black;
+  width: 100%;
+  border-bottom: 1px solid black;
   transition: opacity 0.2s ease-in-out;
   opacity: ${props => (props.isDeleting ? 0.3 : 1)};
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  margin-bottom: 4px;
 `
 
 const ContactCard = props => {
@@ -29,18 +34,24 @@ const ContactCard = props => {
 
   return (
     <Wrapper isDeleting={isDeleting}>
-      <H3>{id}</H3>
-      <P>{contact}</P>
-      <ButtonIconText
-        label={deleteError}
-        type="button"
-        onClick={() => handleDeleteClick(id)}
-      >
-        <RiDeleteBin5Fill />
-      </ButtonIconText>
-      <ButtonIconText type="button" onClick={() => initCall(contact)}>
-        <RiPhoneFill />
-      </ButtonIconText>
+      <H3>{contact}</H3>
+      <div>
+        <ButtonIconText
+          label={deleteError}
+          type="button"
+          onClick={() => handleDeleteClick(id)}
+          title="delete contact"
+        >
+          <RiDeleteBin5Fill />
+        </ButtonIconText>
+        <ButtonIconText
+          type="button"
+          onClick={() => initCall(contact)}
+          title="call"
+        >
+          <RiPhoneFill />
+        </ButtonIconText>
+      </div>
     </Wrapper>
   )
 }
