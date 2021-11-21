@@ -31,7 +31,7 @@ const MobileOverlay = styled.div`
   position: fixed;
   top: 80px;
   left: 12px;
-  height: calc(50vh - 80px);
+  max-height: calc(50vh - 80px);
   min-height: 250px;
   width: calc(100% - 24px);
   background-color: white;

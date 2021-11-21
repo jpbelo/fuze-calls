@@ -15,6 +15,10 @@
     {
       "contact": "123123123",
       "id": 4
+    },
+    {
+      "contact": "123123123",
+      "id": 5
     }
   ],
   "history": [
@@ -27,5 +31,48 @@
       "id": 1
     }
   ],
-  "calls": []
+  "calls": [
+    {
+      "contact": "João",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T17:25:49.295Z",
+      "answeredAt": "2021-11-21T17:25:56.749Z",
+      "id": 1
+    },
+    {
+      "contact": "Belo",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T17:25:50.695Z",
+      "answeredAt": "2021-11-21T17:25:53.159Z",
+      "id": 2
+    },
+    {
+      "contact": "919191919",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T17:25:50.011Z",
+      "answeredAt": "2021-11-21T17:25:57.377Z",
+      "id": 3
+    },
+    {
+      "contact": "123123123",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T17:25:57.545Z",
+      "answeredAt": "2021-11-21T17:26:03.028Z",
+      "id": 4
+    },
+    {
+      "contact": "Belo",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T17:25:58.395Z",
+      "answeredAt": "2021-11-21T17:26:01.357Z",
+      "id": 5
+    },
+    {
+      "contact": "123123123",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T17:25:57.945Z",
+      "answeredAt": "2021-11-21T17:26:07.572Z",
+      "id": 6
+    }
+  ]
 }
