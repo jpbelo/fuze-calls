@@ -7,6 +7,46 @@
     {
       "contact": "João",
       "id": 2
+    },
+    {
+      "contact": "a",
+      "id": 3
+    },
+    {
+      "contact": "avb",
+      "id": 4
+    },
+    {
+      "contact": "av",
+      "id": 5
+    },
+    {
+      "contact": "avbn",
+      "id": 6
+    },
+    {
+      "contact": "mavbn",
+      "id": 7
+    },
+    {
+      "contact": "mavbna",
+      "id": 8
+    },
+    {
+      "contact": "mavbnaa",
+      "id": 9
+    },
+    {
+      "contact": "mavbnaa33",
+      "id": 10
+    },
+    {
+      "contact": "mavbnaa3fa3",
+      "id": 11
+    },
+    {
+      "contact": "mavbnaa3fa32te",
+      "id": 12
     }
   ],
   "history": [
@@ -41,6 +81,38 @@
       "answeredAt": "2021-11-21T16:09:57.837Z",
       "terminatedAt": "2021-11-21T16:10:05.118Z",
       "id": 4
+    },
+    {
+      "contact": "João",
+      "state": "TERMINATED",
+      "initiatedAt": "2021-11-21T16:28:43.938Z",
+      "answeredAt": null,
+      "terminatedAt": "2021-11-21T16:28:46.347Z",
+      "id": 5
+    },
+    {
+      "contact": "João",
+      "state": "TERMINATED",
+      "initiatedAt": "2021-11-21T15:35:05.492Z",
+      "answeredAt": "2021-11-21T15:35:10.838Z",
+      "terminatedAt": "2021-11-21T16:28:51.279Z",
+      "id": 6
+    },
+    {
+      "contact": "João",
+      "state": "TERMINATED",
+      "initiatedAt": "2021-11-21T16:34:27.371Z",
+      "answeredAt": null,
+      "terminatedAt": "2021-11-21T16:34:34.797Z",
+      "id": 7
+    },
+    {
+      "contact": "919191919",
+      "state": "TERMINATED",
+      "initiatedAt": "2021-11-21T15:34:36.358Z",
+      "answeredAt": "2021-11-21T15:34:38.988Z",
+      "terminatedAt": "2021-11-21T16:35:02.739Z",
+      "id": 8
     }
   ],
   "calls": [
@@ -59,13 +131,6 @@
       "id": 2
     },
     {
-      "contact": "919191919",
-      "state": "ACTIVE",
-      "initiatedAt": "2021-11-21T15:34:36.358Z",
-      "answeredAt": "2021-11-21T15:34:38.988Z",
-      "id": 3
-    },
-    {
       "contact": "João",
       "state": "ACTIVE",
       "initiatedAt": "2021-11-21T15:34:38.993Z",
@@ -73,11 +138,32 @@
       "id": 4
     },
     {
+      "contact": "919191919",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T16:36:34.169Z",
+      "answeredAt": "2021-11-21T16:36:39.231Z",
+      "id": 5
+    },
+    {
       "contact": "João",
       "state": "ACTIVE",
-      "initiatedAt": "2021-11-21T15:35:05.492Z",
-      "answeredAt": "2021-11-21T15:35:10.838Z",
-      "id": 5
+      "initiatedAt": "2021-11-21T16:36:34.686Z",
+      "answeredAt": "2021-11-21T16:36:38.394Z",
+      "id": 6
+    },
+    {
+      "contact": "João",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T16:36:35.018Z",
+      "answeredAt": "2021-11-21T16:36:44.846Z",
+      "id": 7
+    },
+    {
+      "contact": "919191919",
+      "state": "ACTIVE",
+      "initiatedAt": "2021-11-21T16:36:48.186Z",
+      "answeredAt": "2021-11-21T16:36:57.327Z",
+      "id": 8
     }
   ]
 }

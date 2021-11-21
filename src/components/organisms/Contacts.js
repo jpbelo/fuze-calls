@@ -9,7 +9,12 @@ import { ContactCard } from '../molecules'
 const Wrapper = styled.div`
   background-color: rgba(0, 255, 0, 0.05);
   padding: 16px;
+  overflow: hidden;
   ${space};
+`
+const ListWrapper = styled.div`
+  height: 100%;
+  overflow: scroll;
 `
 
 const Contacts = () => {
@@ -17,12 +22,14 @@ const Contacts = () => {
 
   return (
     <Wrapper>
-      <H2>Contacts</H2>
-      <div>
-        {contacts.map(contact => (
-          <ContactCard key={contact.id} {...contact} />
-        ))}
-      </div>
+      <H2 mb={24}>Contacts</H2>
+      <ListWrapper>
+        <div>
+          {contacts.map(contact => (
+            <ContactCard key={contact.id} {...contact} />
+          ))}
+        </div>
+      </ListWrapper>
     </Wrapper>
   )
 }

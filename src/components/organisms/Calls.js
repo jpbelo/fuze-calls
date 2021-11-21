@@ -8,13 +8,17 @@ import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
   padding: 16px;
-  overflow: scroll;
+  overflow: hidden;
   ${space};
 `
 const ListWrapper = styled.div`
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  height: 100%;
+  overflow: scroll;
+  & > div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 `
 
 const Calls = () => {
@@ -23,9 +27,11 @@ const Calls = () => {
     <Wrapper>
       <H2 mb={24}>Calls ({calls.length})</H2>
       <ListWrapper>
-        {calls.map(call => (
-          <CallCard {...call} key={call.id} mb={16} />
-        ))}
+        <div>
+          {calls.map(call => (
+            <CallCard {...call} key={call.id} mb={16} />
+          ))}
+        </div>
       </ListWrapper>
     </Wrapper>
   )

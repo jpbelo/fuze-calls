@@ -3,12 +3,18 @@ import styled from 'styled-components'
 import { space } from 'styled-system'
 
 import { H2 } from '../atoms'
+import { HistoryCard } from '../molecules'
 import { useCallsContext } from '../../utils/context'
 
 const Wrapper = styled.div`
   background-color: rgba(0, 0, 255, 0.05);
   padding: 16px;
+  overflow: hidden;
   ${space};
+`
+const ListWrapper = styled.div`
+  height: 100%;
+  overflow: scroll;
 `
 
 const History = () => {
@@ -16,17 +22,14 @@ const History = () => {
 
   return (
     <Wrapper>
-      <H2>History</H2>
-      <div>
-        {history.map(call => (
-          <div key={call.id}>
-            <p>{call.contact}</p>
-            <p>{call.terminatedAt}</p>
-            <p>{call.answeredAt}</p>
-            <p>terminatedAt - answeredAt</p>
-          </div>
-        ))}
-      </div>
+      <H2 mb={24}>History</H2>
+      <ListWrapper>
+        <div>
+          {history.map(call => (
+            <HistoryCard key={call.id} {...call} />
+          ))}
+        </div>
+      </ListWrapper>
     </Wrapper>
   )
 }
